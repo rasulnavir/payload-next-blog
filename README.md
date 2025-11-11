@@ -44,13 +44,13 @@ See the [Collections](https://payloadcms.com/docs/configuration/collections) doc
 
 - #### Users (Authentication)
 
-  Users are auth-enabled collections that have access to the admin panel.
+    Users are auth-enabled collections that have access to the admin panel.
 
-  For additional help, see the official [Auth Example](https://github.com/payloadcms/payload/tree/main/examples/auth) or the [Authentication](https://payloadcms.com/docs/authentication/overview#authentication-overview) docs.
+    For additional help, see the official [Auth Example](https://github.com/payloadcms/payload/tree/main/examples/auth) or the [Authentication](https://payloadcms.com/docs/authentication/overview#authentication-overview) docs.
 
 - #### Media
 
-  This is the uploads enabled collection. It features pre-configured sizes, focal point and manual resizing to help you manage your pictures.
+    This is the uploads enabled collection. It features pre-configured sizes, focal point and manual resizing to help you manage your pictures.
 
 ### Docker
 

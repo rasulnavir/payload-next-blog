@@ -1,4 +1,5 @@
 import { withPayload } from '@payloadcms/next/withPayload'
+import withPlaiceholder from '@plaiceholder/next'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -14,4 +15,4 @@ const nextConfig = {
     },
 }
 
-export default withPayload(nextConfig, { devBundleServerPackages: false })
+export default withPlaiceholder(withPayload(nextConfig, { devBundleServerPackages: false }))

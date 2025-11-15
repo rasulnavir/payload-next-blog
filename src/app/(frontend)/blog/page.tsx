@@ -1,4 +1,4 @@
-import { getArticles } from '@/collections/Articles/fetchers'
+import { getPublishedArticles } from '@/collections/Articles/fetchers'
 import { ArticleCard } from './_components/article-card'
 
 function relationIsObject<T>(relation: number | T): relation is T {
@@ -6,9 +6,7 @@ function relationIsObject<T>(relation: number | T): relation is T {
 }
 
 export default async function BlogIndexPage() {
-    const articles = await getArticles()
-    console.log(articles[0])
-
+    const articles = await getPublishedArticles()
     if (!articles.length) {
         return <p>No articles found</p>
     }

@@ -28,18 +28,18 @@ export function ArticleCard({
 }: ArticleCardProps) {
     return (
         <Link href={href} aria-label={`Read article: "${title}"`} className="block">
-            <article className="rounded-md border border-gray-700 overflow-hidden">
+            <article className="rounded-md border border-gray-700 overflow-hidden h-full flex flex-col">
                 {/* cover image */}
                 <Image
                     src={coverImage.url ?? ''}
                     alt={`Cover image for "${title}"`}
                     width={600}
                     height={300}
-                    className="max-h-[300px] object-cover object-center"
+                    className="h-[200px] object-cover object-center w-full"
                 />
 
                 {/* content */}
-                <div className="p-3">
+                <div className="p-3 flex-1 flex flex-col gap-5">
                     <header>
                         {/* title */}
                         <h2 className="font-bold text-lg">{title}</h2>
@@ -47,7 +47,11 @@ export function ArticleCard({
                         <p className="mt-2">{summary}</p>
                     </header>
 
-                    <ArticleMetadata intent="card" data={{ author, publishedAt, readTimeMins }} />
+                    <ArticleMetadata
+                        intent="card"
+                        data={{ author, publishedAt, readTimeMins }}
+                        className="mt-auto"
+                    />
                 </div>
             </article>
         </Link>

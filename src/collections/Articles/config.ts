@@ -76,7 +76,7 @@ export const Articles: CollectionConfig = {
             type: 'date',
             required: true,
             admin: {
-                condition: (data) => data?.status === 'Published',
+                condition: (data) => data?.status === STATUS_OPTIONS.PUBLISHED,
                 date: { pickerAppearance: 'dayAndTime' },
             },
         },

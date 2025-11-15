@@ -1,3 +1,4 @@
+import { Media } from '@/payload-types'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArticleMetadata } from './article-metadata'
@@ -6,11 +7,11 @@ type ArticleCardProps = {
     href: string
     title: string
     summary: string
-    coverImage: string
+    coverImage: Media
     publishedAt: Date
     readTimeMins: number
     author: {
-        avatar: string
+        avatar: Media
         name: string
         role: string
     }
@@ -30,7 +31,7 @@ export function ArticleCard({
             <article className="rounded-md border border-gray-700 overflow-hidden">
                 {/* cover image */}
                 <Image
-                    src={coverImage}
+                    src={coverImage.url ?? ''}
                     alt={`Cover image for "${title}"`}
                     width={600}
                     height={300}

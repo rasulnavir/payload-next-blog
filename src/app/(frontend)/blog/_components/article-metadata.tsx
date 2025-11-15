@@ -1,3 +1,4 @@
+import { Media } from '@/payload-types'
 import Image from 'next/image'
 
 export function ArticleMetadata({
@@ -6,7 +7,7 @@ export function ArticleMetadata({
     className,
 }: {
     data: {
-        author: { avatar: string; name: string; role: string }
+        author: { avatar: Media; name: string; role: string }
         publishedAt: Date
         readTimeMins: number
     }
@@ -21,7 +22,7 @@ export function ArticleMetadata({
             <div className={`flex items-center ${intent === 'card' ? 'gap-2' : 'gap-3'}`}>
                 {/* author avatar */}
                 <Image
-                    src={author.avatar}
+                    src={author.avatar.url ?? ''}
                     alt={`${author.name}'s avatar`}
                     width={40}
                     height={40}

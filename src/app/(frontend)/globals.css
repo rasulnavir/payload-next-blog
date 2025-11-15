@@ -1,1 +1,16 @@
 @import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+
+@theme {
+    --color-dimmed: theme('colors.gray.400');
+}
+
+@layer base {
+    body {
+        @apply text-gray-100;
+    }
+}
+
+@utility container {
+    @apply mx-auto h-full max-w-6xl px-3;
+}

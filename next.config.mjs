@@ -13,6 +13,14 @@ const nextConfig = {
 
         return webpackConfig
     },
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'via.assets.so',
+            },
+        ],
+    },
 }
 
 export default withPlaiceholder(withPayload(nextConfig, { devBundleServerPackages: false }))
